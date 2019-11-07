@@ -55,6 +55,7 @@ class App extends React.Component {
             <VideoList
               handleVideoListEntryTitleClick={this.handleVideoListEntryTitleClick.bind(this)}
               videos={this.state.videos}
+            // {/* <VideoListContainer /> */}
             />
           </div>
         </div>
