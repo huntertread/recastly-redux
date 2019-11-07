@@ -2,16 +2,7 @@ import { combineReducers } from 'redux';
 import currentVideo from './currentVideo.js';
 import videoList from './videoList.js';
 
-var rootReducer = (state = {videoList: [], currentVideo: null}, action) => {
-  switch (action.type) {
-  case 'CHANGE_VIDEO_LIST':
-    return action.videos;
-  case 'CHANGE_VIDEO':
-    return action.video;
-  default:
-    return state;
-  }
-};
+var rootReducer = combineReducers({currentVideo, videoList});
 
 //TODO: define the root reducer for this app
 

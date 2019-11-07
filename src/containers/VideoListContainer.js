@@ -1,14 +1,18 @@
 import { connect } from 'react-redux';
 import VideoList from './../components/VideoList.js';
 import changeVideo from './../actions/currentVideo.js';
-import VideoListEntry from './../components/VideoListEntry.js'
+import VideoListEntry from './../components/VideoListEntry.js';
+import store from './../store/store.js';
 
-var videoListProps = () => {}
+var videoListProps = (VideoList) => {
+};
 
-var videoListDispatchToProps = () => {
+var videoListDispatchToProps = (dispatch) => {
   return {
-    video: 'hi'
-  }
+    handleVideoListEntryTitleClick () {
+      dispatch();
+    }
+  };
 };
 
 var VideoListContainer = connect(videoListProps, videoListDispatchToProps)(VideoList); // maybe this should be delegating to VideoListEntry?
